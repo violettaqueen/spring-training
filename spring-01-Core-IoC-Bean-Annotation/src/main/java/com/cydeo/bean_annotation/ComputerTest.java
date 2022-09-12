@@ -28,6 +28,11 @@ public class ComputerTest {
 
         myPc.powerUp();
 
+        System.out.println("************Multiple Objects******************");
+
+        Monitor theMonitor2 = container.getBean("monitorSony", Monitor.class);  //DEFAULT BEAN NAME
+        Monitor theMonitor3 = container.getBean("sony", Monitor.class);  //CUSTOM BEAN NAME
+        Monitor theMonitor4 = container.getBean( Monitor.class);  //@Primary
 
 
     }

@@ -1,13 +1,11 @@
 package com.cydeo.streotype_annotation.monitorfactory;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
-public class SonyMonitor extends Monitor{
+public class AcerMonitor extends Monitor{
 
-    public SonyMonitor() {
+    public AcerMonitor() {
         super("25 inch beast","Sony",25);
     }
 
@@ -15,3 +13,4 @@ public class SonyMonitor extends Monitor{
         System.out.println("Drawing pixel with Sony");
     }
 }
+
