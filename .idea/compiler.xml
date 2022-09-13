@@ -14,6 +14,7 @@
         <module name="spring-04-Autowiring" />
         <module name="spring-01-Core-IoC-Bean-Annotation" />
         <module name="spring-00-Coupling" />
+        <module name="spring-05-Core-Abstraction" />
       </profile>
     </annotationProcessing>
   </component>
