@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/lab01_coupling/pom.xml" />
         <option value="$PROJECT_DIR$/lab02_IoC/pom.xml" />
         <option value="$PROJECT_DIR$/spring-05-Core-Abstraction/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-06-Core-BeanScope/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-07-SpringBoot-Demo/pom.xml" />
       </list>
     </option>
   </component>
