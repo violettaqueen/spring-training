@@ -20,7 +20,7 @@ public class ComputerTest {
         BeanFactory context = new AnnotationConfigApplicationContext();
 
 //        Monitor theMonitor = container.getBean(Monitor.class);
-        SonyMonitor theMonitor = container.getBean(SonyMonitor.class);
+        Monitor theMonitor = container.getBean(Monitor.class);
         Case theCase = container.getBean(Case.class);
         Motherboard theMotherboard = container.getBean(Motherboard.class);
 
