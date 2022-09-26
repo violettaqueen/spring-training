@@ -30,7 +30,7 @@ public class StudentController {
         numbers.add(5);
         numbers.add(6);
         numbers.add(7);
-
+                            //key
         model.addAttribute("numbers", numbers);
 
         LocalDate dt = LocalDate.now();

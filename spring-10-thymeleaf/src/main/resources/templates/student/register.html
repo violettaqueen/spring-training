@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{index.page.title}"></title>
+    <link th:href="@{/css/bootstrap-4.1.3-dist/css/bootstrap.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+</head>
+<body>
+
+<!--Bootstrap integration-->
+<h1 class="display-1 text-danger">Welcome to Cydeo Student's Register Form</h1>
+
+<h2 class="cydeo">My custom CSS</h2>
+
+<!--Image integration-->
+<img th:src="@{/images/welcome-38249.png}" alt="">
+
+
+
+<!--Display Value of model-->
+<h2 th:text="${students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).lastName}"></h2>
+
+<!--Concatenation-->
+<h2 th:text="${'Hello' + students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).firstName +' '+ students.get(0).lastName}"></h2>
+
+<!--Link-->
+<h2>
+    <a th:href="@{http://cydeo.com}">Cydeo Page</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome}">Welcome</a>
+</h2>
+
+<!--Adding Parameters in Link-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link1</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome(name = ${students.get(0).firstName})}">Welcome</a>
+</h2>
+
+<!--Iteration-->
+<h2>Printing Student's First name</h2>
+<ul>
+    <li th:each=" student : ${students} " th:text="${student.firstName}"></li>
+</ul>
+
+<h2>Printing Student's Last Name</h2>
+<ul>
+    <li th:each=" student : ${students} " th:text="${student.lastName}"></li>
+</ul>
+
+<h2>Print Students in Table</h2>
+
+<table>
+    <thead>
+    <tr th:each=" student : ${students}">
+
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td th:text="${student.age}"></td>
+        <td th:text="${student.state}"></td>
+
+    </tr>
+    </thead>
+</table>
+
+<!--Conditional logic-->
+
+<div th:text="${students.get(0).age>25 ? 'Eligible' : 'Not Eligible'}"></div>
+
+<div>
+    <span th:if="${students.get(0).getState()=='Arizona'}">Arizona</span>
+    <span th:unless="${students.get(0).getState()=='Arizona'}">No Arizona</span>
+</div>
+</body>
+</html>

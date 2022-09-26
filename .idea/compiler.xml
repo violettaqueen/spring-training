@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-10-thymeleaf" />
         <module name="spring-02-Core-IoC-Stereotype-Annotation" />
         <module name="spring-03-Wiring" />
         <module name="spring-04-Autowiring" />
@@ -29,6 +30,7 @@
       <module name="spring-07-SpringBoot-Demo" options="-parameters" />
       <module name="spring-08-MVC-Controller" options="-parameters" />
       <module name="spring-09-MVC-Model" options="-parameters" />
+      <module name="spring-10-thymeleaf" options="-parameters" />
     </option>
   </component>
 </project>

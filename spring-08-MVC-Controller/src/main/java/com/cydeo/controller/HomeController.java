@@ -3,8 +3,8 @@ package com.cydeo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
-public class HomeController {
+@Controller //controller will look for end-point
+public class HomeController { //bean
 
     @RequestMapping("/home")
     public String getHomePage() {   //which end point? www.amazon.com/login

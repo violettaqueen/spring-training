@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Getter
 @Component
-public class PC {
+public class PC {  //if @Component, Spring create an obj - new PC
 
     private Case theCase;
 
