@@ -26,7 +26,8 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     private Status paymentStatus;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    //@OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE} ) //same action done in Parent will happen in child
     @JoinColumn(name = "payment_detail_id")
     private PaymentDetail paymentDetail;
 
