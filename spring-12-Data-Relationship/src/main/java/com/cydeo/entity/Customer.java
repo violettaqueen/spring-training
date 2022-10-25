@@ -4,28 +4,28 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "user accounts")
+@Table(name = "customers")
 @NoArgsConstructor
 @Data
-public class UserAccount {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String address;
     private String email;
-    private String password;
+    private String name;
+    private String surName;
     private String userName;
 
-    @ManyToMany
-    private List<AccountDetails> accountDetailsList;
-
-    public UserAccount(String email, String password, String userName) {
+    public Customer(String address, String email, String name, String surName, String userName) {
+        this.address = address;
         this.email = email;
-        this.password = password;
+        this.name = name;
+        this.surName = surName;
         this.userName = userName;
     }
 }

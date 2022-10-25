@@ -1,6 +1,6 @@
 package com.cydeo.enums;
 
-public enum Role {
+public enum UserRole {
 
     ROLE
 }

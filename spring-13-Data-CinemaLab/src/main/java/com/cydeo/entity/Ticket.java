@@ -7,31 +7,20 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name= "tickets")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Ticket {
+public class Ticket extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(columnDefinition = "DATE")
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime dateTime;
 
-    private String seatNumber;
-    private String rowNumber;
+    private Integer seatNumber;
+    private Integer rowNumber;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private MovieCinema movieCinema;
 
-    @ManyToOne
-    private UserAccount userAccount;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User userAccount;
 
-
-    public Ticket(LocalDateTime dateTime, String seatNumber, String rowNumber) {
-        this.dateTime = dateTime;
-        this.seatNumber = seatNumber;
-        this.rowNumber = rowNumber;
-    }
 }

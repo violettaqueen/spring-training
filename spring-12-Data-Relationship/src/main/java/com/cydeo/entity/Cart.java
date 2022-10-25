@@ -16,11 +16,10 @@ public class Cart {
     private Long id;
 
     @ManyToMany //whenever we put this annotation, it will try to create a foreign key
-    @JoinTable(name = "cart_item_rel",joinColumns = @JoinColumn(name = "c_id"),
-    inverseJoinColumns = @JoinColumn(name = "i_id"))
+    @JoinTable(name = "cart_item_rel",
+            joinColumns = @JoinColumn(name = "c_id"),
+            inverseJoinColumns = @JoinColumn(name = "i_id"))
     private List<Item> itemList;
-
-
 
 
 }
