@@ -23,7 +23,7 @@ public class Merchant {
     private BigDecimal commissionRate;
     private Integer payoutDelayCount;
 
-    @OneToMany(mappedBy = "merchant") //in OneToMany relationship, ownwership one merchant many payments
+    @OneToMany(mappedBy = "merchant") //in OneToMany relationship, ownership one merchant many payments
     private List<Payment> paymentList;
 
     public Merchant(String name, String code, BigDecimal transactionFee, BigDecimal commissionRate, Integer payoutDelayCount) {

@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-13-Data-CinemaLab" />
         <module name="spring-11-Data-TableCreation" />
         <module name="spring-03-Wiring" />
         <module name="spring-01-Core-IoC-Bean-Annotation" />
@@ -35,6 +36,7 @@
       <module name="spring-10-thymeleaf" options="-parameters" />
       <module name="spring-11-Data-TableCreation" options="-parameters" />
       <module name="spring-12-Data-Relationship" options="-parameters" />
+      <module name="spring-13-Data-CinemaLab" options="-parameters" />
     </option>
   </component>
 </project>
