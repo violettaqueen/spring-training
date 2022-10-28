@@ -14,6 +14,7 @@ public interface DepartmentRepository extends JpaRepository<Department, String> 
 
     //display all departments in the health division
     List<Department> findByDivision(String division);
+    //find all Departments in the health division
     List<Department> findByDivisionEquals(String division);
     List<Department> findByDivisionIs(String division);
 
@@ -23,11 +24,12 @@ public interface DepartmentRepository extends JpaRepository<Department, String> 
     //display top 3 departments where their division includes 'Hea' without duplicates
     List<Department> findDistinctTop3ByDivisionContains(String pattern);
 
-    //display department division
+    //display department division - JPQL
     @Query("select d from Department d where d.division in ?1")
     List<Department> retrieveDepartmentDivision(List<String> divisions);
 
     //named parameter
+
 
 
 
