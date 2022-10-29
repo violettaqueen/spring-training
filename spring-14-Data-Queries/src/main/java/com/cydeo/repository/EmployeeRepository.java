@@ -35,7 +35,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> findBySalaryGreaterThanEqualOrderBySalary(Integer salary);
 
     List<Employee> findDistinctTop3BySalaryLessThan(Integer salary);
-
+    // is null
     List<Employee> findByEmailIsNull();
 
     @Query("select e from Employee e where e.email = 'amcnee1@google.es'")
@@ -79,16 +79,22 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> retrieveEmployeeEmailIsNUll();
 
     //is not null
+    @Query("select e from Employee e where e.email is not null")
+    List<Employee> retrieveEmployeeEmailIsNotNull();
 
     //sorting in acs order
     @Query("select e from Employee e order by e.salary")
     List<Employee> retrieveEmployeeSalaryOrderAsc();
 
     //sorting in desc
+    @Query("select e from Employee e order by e.salary desc")
+    List<Employee> retrieveEmployeeSalaryOrderDesc();
 
     //native query
-
+     @Query(value = "select * from employees where salary = ?1", nativeQuery = true)
     List<Employee> retrieveEmployeeDetailBySalary(int salary);
+
+
 
 
 
