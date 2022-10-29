@@ -7,26 +7,23 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "account_detaols")
 @NoArgsConstructor
 @Data
-public class AccountDetails {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Account extends BaseEntity{
 
     private String name;
     private String address;
     private String country;
-    private String city;
     private String state;
+    private String city;
     private Integer age;
     private String postalCode;
     @Enumerated(EnumType.STRING)
     private UserRole role;
-
     @OneToOne(mappedBy = "account")
     private User user;
+
 
 
 }

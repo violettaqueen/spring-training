@@ -1,15 +1,17 @@
 package com.cydeo.entity;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "user_account")
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class User extends BaseEntity{
 
     private String email;
@@ -18,7 +20,16 @@ public class User extends BaseEntity{
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_details_id")
-    private AccountDetails account;
+    private Account account;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
 
 
 }
