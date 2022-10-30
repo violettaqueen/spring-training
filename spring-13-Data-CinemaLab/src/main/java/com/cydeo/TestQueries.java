@@ -28,19 +28,34 @@ public class TestQueries implements CommandLineRunner {
         //System.out.println(ticketRepository.countTicketsByUserAccountContains("bernard@email.com"));
         //System.out.println(ticketRepository.countTicketsByMovieCinemaContains());
         //System.out.println(ticketRepository.getTicketsByDateTimeBetween(2020-12-05 20:00:00),(2020-12-08 19:00:00));
-        //System.out.println(ticketRepository.getTicketsByUserAccountContains());sout
+        //System.out.println(ticketRepository.getTicketsByUserAccountContains());
         //System.out.println(ticketRepository.retrieveTicketsUserContains("bernard@email.com"));
         //System.out.println(ticketRepository.retrieveAllTicketsDatesBetween());
         //System.out.println(ticketRepository.retrieveTicketsByMovieName("The Gentleman"));
         //System.out.println(ticketRepository.countTicketsByNumberUserBought("bernard@email.com"));
         //System.out.println(ticketRepository.retrieveAllTickets());
-        //System.out.println("**********USER REPOSITORY**********");
-        //System.out.println(userRepository.getUserByEmail("bernard@email.com"));
-        //System.out.println(userRepository.getUserByUsername("bernard"));
-        //System.out.println(userRepository.getUsersByAccountContains("Bernard"));
-        //System.out.println(userRepository.getUsersByAccountAgeIsGreaterThan(35));
-        //System.out.println(userRepository.retrieveUserByEmail("bernard@email.com"));
-        //System.out.println(userRepository.retrieveUserByUserName("bernard"));
+
+        System.out.println("**********USER REPOSITORY**********");
+
+        System.out.println(userRepository.getUserByEmail("bernard@email.com"));
+        System.out.println(userRepository.getUserByUsername("bernard"));
+        System.out.println(userRepository.getUsersByAccountNameContains("Bernard"));
+        System.out.println(userRepository.getUsersByAccountAgeIsGreaterThan(35));
+        System.out.println(userRepository.retrieveUserByEmail("bernard@email.com"));
+        System.out.println(userRepository.retrieveUserByUserName("bernard"));
+        System.out.println(userRepository.retrieveAllUsersContainsName("bernard"));
+        System.out.println(userRepository.retrieveAllUsers());
+        System.out.println(userRepository.retrieveAllUsersAgeBetween(20, 70));
+        System.out.println(userRepository.retrieveAllUsersJPQL());
+        System.out.println(userRepository.retrieveUserEmail("lawrence.f@email.com"));
+
+
+
+
+
+
+
     }
+
 
 }
