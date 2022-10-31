@@ -57,9 +57,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     List<Movie> retrieveAllMoviesDurationExistsBetween(int duration1, int duration2);
 
     //Write a native query to list the top 5 most expensive movies
-    //@Query(value = "select distinct  from movies")
-
+    //@Query(value = "select distinct from movies")
     //List<Movie> retrieveTop5ByOrderByPrice();
-
 
 }

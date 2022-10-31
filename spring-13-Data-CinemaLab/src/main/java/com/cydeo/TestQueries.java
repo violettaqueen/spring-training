@@ -25,15 +25,6 @@ public class TestQueries implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        //System.out.println(ticketRepository.countTicketsByUserAccountContains("bernard@email.com"));
-        //System.out.println(ticketRepository.countTicketsByMovieCinemaContains());
-        //System.out.println(ticketRepository.getTicketsByDateTimeBetween(2020-12-05 20:00:00),(2020-12-08 19:00:00));
-        //System.out.println(ticketRepository.getTicketsByUserAccountContains());
-        //System.out.println(ticketRepository.retrieveTicketsUserContains("bernard@email.com"));
-        //System.out.println(ticketRepository.retrieveAllTicketsDatesBetween());
-        //System.out.println(ticketRepository.retrieveTicketsByMovieName("The Gentleman"));
-        //System.out.println(ticketRepository.countTicketsByNumberUserBought("bernard@email.com"));
-        //System.out.println(ticketRepository.retrieveAllTickets());
 
         System.out.println("**********USER REPOSITORY**********");
 
@@ -49,8 +40,22 @@ public class TestQueries implements CommandLineRunner {
         System.out.println(userRepository.retrieveAllUsersJPQL());
         System.out.println(userRepository.retrieveUserEmail("lawrence.f@email.com"));
 
+        System.out.println("**********USER REPOSITORY**********");
 
 
+        System.out.println(ticketRepository.countTicketsByUserAccountEmail("bernard@email.com"));
+        System.out.println(ticketRepository.getTicketsByUserAccountEmail("lawrence.f@email.com"));
+        System.out.println(ticketRepository.countTicketsByMovieCinemaMovieNameContains("The Gentleman"));
+        //System.out.println(ticketRepository.getTicketsByDateTimeBetween();
+        //System.out.println(ticketRepository.getTicketsByUserAccountContains());
+        System.out.println(ticketRepository.retrieveTicketsUserContains("bernard@email.com"));
+        //System.out.println(ticketRepository.retrieveAllTicketsDatesBetween(2020-12-05T20:00, 2020-12-05T20:00);
+        //System.out.println(ticketRepository.retrieveTicketsByMovieName("The Gentleman"));
+        System.out.println(ticketRepository.countTicketsByNumberUserBought("bernard@email.com"));
+        //System.out.println(ticketRepository.retrieveAllTickets());
+        //System.out.println("NATIVE:" + ticketRepository.retrieveNumberOfTicketsByUserBoughtDatesBetween());
+        System.out.println("Native : " + ticketRepository.retrieveAllTickets());
+        //System.out.println("Native: " + ticketRepository.retrieveAllTicketsByUserNameOrAccountNameOrMovieName("josieStory", "josie_story@email.com", "The Gentleman"));
 
 
 

@@ -18,18 +18,17 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     // ------------------- DERIVED QUERIES ------------------- //
 
     //Write a derived query to count how many tickets a user bought
-    List<Integer> countTicketsByUserAccountContains(String email);
-
+    List<Integer> countTicketsByUserAccountEmail(String email);
 
     //Write a derived query to list all tickets by specific email
-    List<Ticket> getTicketsByUserAccountContains(String email);
+    List<Ticket> getTicketsByUserAccountEmail(String email);
 
     //Write a derived query to count how many tickets are sold for a specific movie
-    //int countTicketsByMovieCinema(String movieName);
+    List<Integer> countTicketsByMovieCinemaMovieNameContains(String movieName);
 
 
     //Write a derived query to list all tickets between a range of dates
-    List<Ticket> getTicketsByDateTimeBetween(LocalDateTime dateTime, LocalDateTime dateTime2);
+    //List<Ticket> getTicketsByDateTimeBetween(LocalDateTime dateTime, LocalDateTime dateTime2);
 
     // ------------------- JPQL QUERIES ------------------- //
 
@@ -44,10 +43,12 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     // ------------------- Native QUERIES ------------------- //
 
     //Write a native query to count the number of tickets a user bought
-    @Query(value = "select count(tickets) from tickets where user_account_id.email = ?1", nativeQuery = true)
-    List<Ticket> countTicketsByNumberUserBought(String email);
+    @Query(value = "select count(*) from ticket, user_account  where user_account.email = ?1", nativeQuery = true)
+    List<Integer> countTicketsByNumberUserBought(String email);
 
     //Write a native query to count the number of tickets a user bought in a specific range of dates
+    @Query(value = "select count (*) from ticket, user_account where date_time between ?1 and ?2", nativeQuery = true)
+    List<Integer> retrieveNumberOfTicketsByUserBoughtDatesBetween(LocalDateTime date1, LocalDateTime date2);
 
 
     //Write a native query to distinct all tickets by movie name
@@ -59,10 +60,11 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     //List<Ticket> retrieveAllTicketsByUserEmail(String email);
 
     //Write a native query that returns all tickets
-    @Query(value = "select * from tickets", nativeQuery = true)
+    @Query(value = "select * from ticket", nativeQuery = true)
     List<Ticket> retrieveAllTickets();
 
     //Write a native query to list all tickets where a specific value should be containable in the username or account name or movie name
-
+    //@Query(value = "select * from ticket, user_account, account_details, movie_cinema where userName = ?1 , accountName = ?2 , movieName = ?3", nativeQuery = true)
+    //List<Ticket> retrieveAllTicketsByUserNameOrAccountNameOrMovieName(String userName, String AccountName, String MovieName);
 
 }
