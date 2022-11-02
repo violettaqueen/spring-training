@@ -28,13 +28,13 @@ public class QueryDemo implements CommandLineRunner {
 
         System.out.println("**********USER REPOSITORY**********");
 
-        System.out.println(userRepository.getUserByEmail("bernard@email.com"));
-        System.out.println(userRepository.getUserByUsername("bernard"));
-        System.out.println(userRepository.getUsersByAccountNameContains("Bernard"));
-        System.out.println(userRepository.getUsersByAccountAgeIsGreaterThan(35));
+        //System.out.println(userRepository.getUserByEmail("bernard@email.com"));
+        //System.out.println(userRepository.getUserByUsername("bernard"));
+        //ystem.out.println(userRepository.getUsersByAccountNameContains("Bernard"));
+       // System.out.println(userRepository.getUsersByAccountAgeIsGreaterThan(35));
         System.out.println(userRepository.retrieveUserByEmail("bernard@email.com"));
         System.out.println(userRepository.retrieveUserByUserName("bernard"));
-        System.out.println(userRepository.retrieveAllUsersContainsName("bernard"));
+        //System.out.println(userRepository.retrieveAllUsersContainsName("bernard"));
         System.out.println(userRepository.retrieveAllUsers());
         System.out.println(userRepository.retrieveAllUsersAgeBetween(20, 70));
         System.out.println(userRepository.retrieveAllUsersJPQL());
