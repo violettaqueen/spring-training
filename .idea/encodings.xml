@@ -10,5 +10,8 @@
     <file url="file://$PROJECT_DIR$/spring-13-Data-CinemaLab/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-14-Data-Queries/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-15-REST/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-16-REST-Jackson/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-17-REST-ConsumeAPIs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-18-REST-SchoolLab/src/main/java" charset="UTF-8" />
   </component>
 </project>

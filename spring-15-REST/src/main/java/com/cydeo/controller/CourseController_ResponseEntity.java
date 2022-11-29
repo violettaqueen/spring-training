@@ -53,5 +53,19 @@ public class CourseController_ResponseEntity {
                 .body(courseService.createCourse(course));
     }
 
+    public ResponseEntity<Void> deleteCourseById(@PathVariable("id") Long courseId){
+
+        courseService.deleteCourseById(courseId);
+        return ResponseEntity
+                .noContent().build();
+    }
+
+    public ResponseEntity<Void> updateCourse(@PathVariable("id") Long courseId, @RequestBody CourseDTO course){
+
+        courseService.updateCourse(courseId, course);
+        return ResponseEntity.noContent().build();  //in return, I will provide CourseDTO as well instead of Void
+
+    }
+
 
 }
