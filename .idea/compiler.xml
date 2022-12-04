@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-20-REST-Security-Keycloak-OraganizationsApp" />
         <module name="spring-13-Data-CinemaLab" />
         <module name="spring-11-Data-TableCreation" />
         <module name="spring-03-Wiring" />
@@ -18,6 +19,7 @@
         <module name="spring-08-MVC-Controller" />
         <module name="spring-10-thymeleaf" />
         <module name="spring-18-REST-SchoolLab" />
+        <module name="spring-20-REST-Security-Keycloak-LicenseApp" />
         <module name="spring-02-Core-IoC-Stereotype-Annotation" />
         <module name="spring-15-REST" />
         <module name="spring-12-Data-Relationship" />
@@ -26,6 +28,7 @@
         <module name="spring-04-Autowiring" />
         <module name="spring-06-Core-BeanScope" />
         <module name="spring-07-SpringBoot-Demo" />
+        <module name="spring-19-REST-OpenAPI3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -47,6 +50,9 @@
       <module name="spring-16-REST-Jackson" options="-parameters" />
       <module name="spring-17-REST-ConsumeAPIs" options="-parameters" />
       <module name="spring-18-REST-SchoolLab" options="-parameters" />
+      <module name="spring-19-REST-OpenAPI3" options="-parameters" />
+      <module name="spring-20-REST-Security-Keycloak-LicenseApp" options="-parameters" />
+      <module name="spring-20-REST-Security-Keycloak-OraganizationsApp" options="-parameters" />
     </option>
   </component>
 </project>
