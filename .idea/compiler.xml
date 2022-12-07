@@ -7,26 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-03-Wiring" />
+        <module name="spring-01-Core-IoC-Bean-Annotation" />
+        <module name="spring-00-Coupling" />
+        <module name="spring-09-MVC-Model" />
+        <module name="Spring-15-REST" />
+        <module name="Spring-19-REST-OpenAPI3" />
+        <module name="spring-18-REST-SchoolLab" />
+        <module name="spring-20-REST-Security-Keycloak-OrganizationsApp" />
+        <module name="spring-02-Core-IoC-Stereotype-Annotation" />
+        <module name="spring-12-Data-Relationship" />
+        <module name="spring-17-REST-ConsumeAPIs" />
+        <module name="spring-06-Core-BeanScope" />
         <module name="spring-20-REST-Security-Keycloak-OraganizationsApp" />
         <module name="spring-13-Data-CinemaLab" />
         <module name="spring-11-Data-TableCreation" />
-        <module name="spring-03-Wiring" />
         <module name="spring-16-REST-Jackson" />
-        <module name="spring-01-Core-IoC-Bean-Annotation" />
-        <module name="spring-00-Coupling" />
         <module name="spring-05-Core-Abstraction" />
-        <module name="spring-09-MVC-Model" />
         <module name="spring-08-MVC-Controller" />
         <module name="spring-10-thymeleaf" />
-        <module name="spring-18-REST-SchoolLab" />
         <module name="spring-20-REST-Security-Keycloak-LicenseApp" />
-        <module name="spring-02-Core-IoC-Stereotype-Annotation" />
         <module name="spring-15-REST" />
-        <module name="spring-12-Data-Relationship" />
         <module name="spring-14-Data-Queries" />
-        <module name="spring-17-REST-ConsumeAPIs" />
         <module name="spring-04-Autowiring" />
-        <module name="spring-06-Core-BeanScope" />
         <module name="spring-07-SpringBoot-Demo" />
         <module name="spring-19-REST-OpenAPI3" />
       </profile>
@@ -34,10 +37,14 @@
     <bytecodeTargetLevel>
       <module name="lab01_coupling" target="18" />
       <module name="lab02_IoC" target="18" />
+      <module name="Spring-16-REST-Jackson" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-15-REST" options="-parameters" />
+      <module name="Spring-16-REST-Jackson" options="-parameters" />
+      <module name="Spring-19-REST-OpenAPI3" options="-parameters" />
       <module name="spring-07-SpringBoot-Demo" options="-parameters" />
       <module name="spring-08-MVC-Controller" options="-parameters" />
       <module name="spring-09-MVC-Model" options="-parameters" />
@@ -53,6 +60,7 @@
       <module name="spring-19-REST-OpenAPI3" options="-parameters" />
       <module name="spring-20-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="spring-20-REST-Security-Keycloak-OraganizationsApp" options="-parameters" />
+      <module name="spring-20-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
     </option>
   </component>
 </project>
