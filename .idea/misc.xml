@@ -27,6 +27,7 @@
         <option value="$PROJECT_DIR$/spring-19-REST-OpenAPI3/pom.xml" />
         <option value="$PROJECT_DIR$/spring-20-REST-Security-Keycloak-LicenseApp/pom.xml" />
         <option value="$PROJECT_DIR$/spring-20-REST-Security-Keycloak-OraganizationsApp/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-21-AOP-Application/pom.xml" />
       </list>
     </option>
   </component>

@@ -18,6 +18,7 @@
         <module name="spring-02-Core-IoC-Stereotype-Annotation" />
         <module name="spring-12-Data-Relationship" />
         <module name="spring-17-REST-ConsumeAPIs" />
+        <module name="spring-21-AOP-Application" />
         <module name="spring-06-Core-BeanScope" />
         <module name="spring-20-REST-Security-Keycloak-OraganizationsApp" />
         <module name="spring-13-Data-CinemaLab" />
@@ -61,6 +62,7 @@
       <module name="spring-20-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="spring-20-REST-Security-Keycloak-OraganizationsApp" options="-parameters" />
       <module name="spring-20-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
+      <module name="spring-21-AOP-Application" options="-parameters" />
     </option>
   </component>
 </project>

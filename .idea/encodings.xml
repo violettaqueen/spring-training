@@ -16,5 +16,6 @@
     <file url="file://$PROJECT_DIR$/spring-19-REST-OpenAPI3/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-20-REST-Security-Keycloak-LicenseApp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-20-REST-Security-Keycloak-OraganizationsApp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-21-AOP-Application/src/main/java" charset="UTF-8" />
   </component>
 </project>
