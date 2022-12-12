@@ -13,8 +13,11 @@ import java.util.List;
 @Component
 public class LoggingAspect {
 
-    Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
+    Logger logger = LoggerFactory.getLogger(LoggingAspect.class); // to be able to see info in the console
 
+    public void test(){
+        logger.info("Hello Violetta");
+    }
 //    @Pointcut("execution(* com.cydeo.controller.CourseController.*(..))")
 //    public void myPointcut() {}
 //
@@ -22,20 +25,20 @@ public class LoggingAspect {
 //    public void log() {
 //        logger.info("Info log..........");
 //    }
-//
+////
 //    @Before("execution(* com.cydeo.controller.CourseController.*(..))")
 //    public void log() {
 //        logger.info("Info log..........");
 //    }
-//
-//    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
-//    public void courseRepositoryFindByIdPC() {}
-//
-//    @Before("courseRepositoryFindByIdPC()")
-//    public void beforeCourseRepositoryFindById(JoinPoint joinPoint) {
-//        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
-//                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
-//    }
+
+    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))") //before findById
+    public void courseRepositoryFindByIdPC() {}
+
+    @Before("courseRepositoryFindByIdPC()")
+    public void beforeCourseRepositoryFindById(JoinPoint joinPoint) { //methods to impl before or after
+        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
+                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+    }
 //
 //    @Pointcut("within(com.cydeo.controller..*)")
 //    public void anyControllerOperation() {}

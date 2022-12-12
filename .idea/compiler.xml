@@ -39,6 +39,7 @@
       <module name="lab01_coupling" target="18" />
       <module name="lab02_IoC" target="18" />
       <module name="Spring-16-REST-Jackson" target="11" />
+      <module name="spring-16-REST-Jackson" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
