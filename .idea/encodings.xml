@@ -17,5 +17,9 @@
     <file url="file://$PROJECT_DIR$/spring-20-REST-Security-Keycloak-LicenseApp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-20-REST-Security-Keycloak-OraganizationsApp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-21-AOP-Application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-22-UnitTesting-JUnit5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-22-UnitTesting-JUnit5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-23-unitTesting-Mockito/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-24-UnitTesting-MockMVC/src/main/java" charset="UTF-8" />
   </component>
 </project>

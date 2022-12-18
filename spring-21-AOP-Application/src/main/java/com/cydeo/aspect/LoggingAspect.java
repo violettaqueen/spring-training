@@ -30,15 +30,15 @@ public class LoggingAspect {
 //    public void log() {
 //        logger.info("Info log..........");
 //    }
-
-    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))") //before findById
-    public void courseRepositoryFindByIdPC() {}
-
-    @Before("courseRepositoryFindByIdPC()")
-    public void beforeCourseRepositoryFindById(JoinPoint joinPoint) { //methods to impl before or after
-        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
-                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
-    }
+//
+//    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))") //before findById
+//    public void courseRepositoryFindByIdPC() {}
+//
+//    @Before("courseRepositoryFindByIdPC()")
+//    public void beforeCourseRepositoryFindById(JoinPoint joinPoint) { //methods to impl before or after
+//        logger.info("Before -> Method: {}, Arguments: {}, Target: {}"
+//                , joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+//    }
 //
 //    @Pointcut("within(com.cydeo.controller..*)")
 //    public void anyControllerOperation() {}
