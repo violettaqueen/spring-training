@@ -3,12 +3,12 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-    @BeforeAll
+    @BeforeAll   // should be static
     static void setUpAll() {
         System.out.println("Before All is executed");
     }
 
-    @AfterAll
+    @AfterAll  // should be static
     static void tearDownAll() {
         System.out.println("After All is executed");
     }
@@ -26,23 +26,28 @@ class CalculatorTest {
     @Test
     void add() {
         System.out.println("Add method");
-        int actual = Calculator.add(2, 3);
-        assertEquals(5, actual, "Test failed");
+        int actual = Calculator.add(2, 3);  //2+3 = actual
+        assertEquals(5, actual, "Test failed");  // this message will appear if test fails
     }
 
     @Test
     void add2() {
         System.out.println("Add2 method");
         //assertThrows(IllegalArgumentException.class, () -> Calculator.add2(3, 2));
-//        assertThrows(AccessDeniedException.class, () -> Calculator.add2(3, 2));
-        assertThrows(IllegalArgumentException.class, () -> Calculator.add(2, 3));
+//        assertThrows(AccessDeniedException.class, () -> Calculator.add2(3, 2)); //if num1>num2 --> fail
+        assertThrows(IllegalArgumentException.class, () -> Calculator.add2(2, 3));
+    }
+    @Test
+    void testCase1() {
+//        System.out.println("Test Case 1");
+        fail("Not implemented yet.");
     }
 
     @Test
     void testCase2() {
         System.out.println("Test Case 2");
-        assertEquals("add", Calculator.operator);
-        assertTrue(Calculator.operator.equals("add"));
+        assertEquals("add", Calculator.operator);  // this 2 methods are same
+        assertTrue(Calculator.operator.equals("add"));  // either true or false
 
     }
 
@@ -68,7 +73,7 @@ class CalculatorTest {
         System.out.println("Test Case 5");
 
         Calculator c1 = new Calculator();
-        Calculator c2 = c1;
+        Calculator c2 = c1;  // c1 and c2 same objects in memory
         Calculator c3 = new Calculator();
 
         assertSame(c1, c2);  // to check object references

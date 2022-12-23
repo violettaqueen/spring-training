@@ -16,7 +16,6 @@
         <module name="Spring-19-REST-OpenAPI3" />
         <module name="spring-18-REST-SchoolLab" />
         <module name="spring-20-REST-Security-Keycloak-OrganizationsApp" />
-        <module name="Spring-16-REST-Jackson" />
         <module name="spring-02-Core-IoC-Stereotype-Annotation" />
         <module name="spring-12-Data-Relationship" />
         <module name="spring-17-REST-ConsumeAPIs" />
@@ -42,6 +41,8 @@
     <bytecodeTargetLevel>
       <module name="lab01_coupling" target="18" />
       <module name="lab02_IoC" target="18" />
+      <module name="Spring-16-REST-Jackson" target="11" />
+      <module name="spring-16-REST-Jackson" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
