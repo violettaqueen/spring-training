@@ -38,7 +38,7 @@ public class StudentControllerTest {
     @Test
     void jsonAssert_Test() throws Exception {
 
-        String expected = "{\"firstName\": \"Mike\", \"lastName\":  \"Smith\", \"age\": 20}";
+        String expected = "{\"firstName\": \"Mike\", \"lastName\":  \"Smith\", \"age\": 20}"; //not good(hardcoded)
         String actual = mvc.perform(MockMvcRequestBuilders.get("/student")
                         .accept(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse().getContentAsString();

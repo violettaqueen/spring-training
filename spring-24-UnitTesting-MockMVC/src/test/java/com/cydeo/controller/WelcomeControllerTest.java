@@ -35,7 +35,7 @@ public class WelcomeControllerTest {
         assertEquals("welcome", result.getResponse().getContentAsString());
     }
     @Test
-    void welcome_Test2() throws Exception {
+    void welcome_Test2() throws Exception {  // better to use
 
         RequestBuilder request = MockMvcRequestBuilders.get("/welcome")
                 .accept(MediaType.APPLICATION_JSON);

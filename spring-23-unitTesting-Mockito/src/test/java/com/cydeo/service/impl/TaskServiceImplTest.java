@@ -29,7 +29,7 @@ class TaskServiceImplTest {
     TaskServiceImpl taskServiceImpl;
 
     @ParameterizedTest
-    @ValueSource(longs = {1L, 2L, 3L})
+    @ValueSource(longs = {1L, 2L, 3L})  // provides value into parameter
     void findById_Test(long id) {
 
         // Given (Preparation)
@@ -56,10 +56,10 @@ class TaskServiceImplTest {
         given(taskMapper.convertToDto(task)).willReturn(new TaskDTO());
 
         // When
-        taskServiceImpl.findById(anyLong());
+        taskServiceImpl.findById(anyLong()); // when I run this method
 
         // Then
-        then(taskRepository).should().findById(anyLong());
+        then(taskRepository).should().findById(anyLong());  //should run the findById method
         then(taskMapper).should(atLeastOnce()).convertToDto(task);
 
     }
