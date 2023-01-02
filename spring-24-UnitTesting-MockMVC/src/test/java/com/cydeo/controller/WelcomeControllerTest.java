@@ -14,36 +14,36 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 
-@WebMvcTest(WelcomeController.class)
+@WebMvcTest(WelcomeController.class)  //controller unit test, add class that needs a test
 public class WelcomeControllerTest {
     @Autowired
     private MockMvc mvc;
     @Test
-    void welcome_Test() throws Exception {
+    void welcome_Test() throws Exception {  // this test is not a preferred way
 
         // call /welcome endpoint
         // verify if response is "welcome"
 
-        RequestBuilder request = MockMvcRequestBuilders.get("/welcome")
-                .accept(MediaType.APPLICATION_JSON) ; //header
+        RequestBuilder request = MockMvcRequestBuilders.get("/welcome")  //create a get request, call endpoint, returns RequestBuilder
+                .accept(MediaType.APPLICATION_JSON) ;                               //header, accepting application Json
 
         // to send request we need MockMvc result
-        MvcResult result = mvc.perform(request).andReturn();
+        MvcResult result = mvc.perform(request).andReturn();                        // sending a request and return
 
         // to verify if response is welcome
-        assertEquals(200, result.getResponse().getStatus());
-        assertEquals("welcome", result.getResponse().getContentAsString());
+        assertEquals(200, result.getResponse().getStatus());               // import from JUnit, check if I have 200 in my response
+        assertEquals("welcome", result.getResponse().getContentAsString());// to verify content if it's welcome
     }
     @Test
-    void welcome_Test2() throws Exception {  // better to use
+    void welcome_Test2() throws Exception {  // better to use, test in postman
 
-        RequestBuilder request = MockMvcRequestBuilders.get("/welcome")
+        RequestBuilder request = MockMvcRequestBuilders.get("/welcome")  // no return
                 .accept(MediaType.APPLICATION_JSON);
 
-        mvc.perform(request)
-                .andExpect(status().isOk())
-                .andExpect(content().string("welcome"))
-                .andReturn();
+        mvc.perform(request)                                                        // perform a request
+                .andExpect(status().isOk())                                         // expect status is ok -> comes from MockMvcResultMatchers
+                .andExpect(content().string("welcome"))               // verify if response bode welcome
+                .andReturn();                                                       // and return
     }
 
 
